@@ -1,0 +1,6 @@
+@TetPee_1.Api_HostAddress = http://localhost:5214
+
+GET {{TetPee_1.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
