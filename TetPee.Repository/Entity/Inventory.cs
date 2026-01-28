@@ -2,15 +2,13 @@
 
 namespace TetPee.Repository.Entity;
 
-public class OrderDetail: BaseEntity<Guid>, IAuditableEntity
+public class Inventory: BaseEntity<Guid>, IAuditableEntity
 {
-    public Guid OrderId { get; set; }
-    public Order Order { get; set; }
-    
+    public int TotalSell { get; set; }
+    public int TotalInStock { get; set; }
+
     public Guid ProductId { get; set; }
     public Product Product { get; set; }
-    public int Quantity { get; set; }
-    public decimal UnitPrice { get; set; }// giá tiền tại thời điểm mua 
     
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdateAt { get; set; }

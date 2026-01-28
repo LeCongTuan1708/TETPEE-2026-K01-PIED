@@ -12,9 +12,11 @@ public class Product: BaseEntity<Guid>, IAuditableEntity
     public Guid UserId { get; set; }//1 user có thể là 1 seller
     public User User { get; set; } // để ORM biết có mối quan hệ với nhau, sau đó xuống database 
     
+    public Inventory Inventory { get; set; }
+    
     public ICollection<OrderDetail>  OrderDetails { get; set; } = new List<OrderDetail>();
     public ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
-    
+    public ICollection<ProductStorage>  ProductStorages { get; set; } = new List<ProductStorage>();
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdateAt { get; set; }
 }

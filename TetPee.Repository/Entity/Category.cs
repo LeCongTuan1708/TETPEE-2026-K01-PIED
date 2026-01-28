@@ -12,6 +12,7 @@ public class Category: BaseEntity<Guid>, IAuditableEntity
     // nếu mà có giá trị, thì nó là thằng con của ParentId
     
     public  ICollection<Category> Children { get; set; } = new HashSet<Category>();
+    public ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
     
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdateAt { get; set; }

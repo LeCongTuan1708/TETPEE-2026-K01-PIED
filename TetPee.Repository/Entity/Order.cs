@@ -6,7 +6,7 @@ public class Order: BaseEntity<Guid>, IAuditableEntity
 {
     public decimal TotalAmount { get; set; }
     public string Status { get; set; } = "Pending"; // Pending, Processing, Completed, Cancelled
-    public required string Adress { get; set; }
+    public required string Address { get; set; }
     
     //1 order có 1 user
     public Guid UserId { get; set; }//1 user có thể là 1 seller

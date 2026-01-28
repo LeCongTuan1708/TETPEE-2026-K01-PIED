@@ -4,9 +4,9 @@ namespace TetPee.Repository.Entity;
 
 public class Seller: BaseEntity<Guid>, IAuditableEntity
 {
-    public string TaxCode { get; set; }
-    public string CompanyName { get; set; }
-    public string CompanyAddress { get; set; }
+    public required string TaxCode { get; set; }
+    public required string CompanyName { get; set; }
+    public required string CompanyAddress { get; set; }
     
     public Guid UserId { get; set; }//1 user có thể là 1 seller
     public User User { get; set; } // để ORM biết có mối quan hệ với nhau, sau đó xuống database 

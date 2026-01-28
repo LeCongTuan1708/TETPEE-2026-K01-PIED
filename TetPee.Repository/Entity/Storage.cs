@@ -6,6 +6,8 @@ public class Storage: BaseEntity<Guid>, IAuditableEntity
 {
     public decimal Price { get; set; }
     public required string Type { get; set; } // Export, Import
+    
+    public ICollection<ProductStorage>  ProductStorages { get; set; } = new List<ProductStorage>();
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdateAt { get; set; }
 }

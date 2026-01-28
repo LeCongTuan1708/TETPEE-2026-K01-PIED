@@ -17,6 +17,7 @@ public class User: BaseEntity<Guid>, IAuditableEntity
     public bool IsVerify { get; set; } = false; // khi user register, thì phải verify email hợp lệ
     public int VerifyCode { get; set; } // Mã verify gửi về email
     
+    public Seller? Seller { get; set; }
     public ICollection<Order> Orders { get; set; } = new List<Order>();// 1 user có 1 mảng order
     
     public DateTimeOffset CreatedAt { get; set; } // dòng dữ liệu này được rạo ra khi nào
